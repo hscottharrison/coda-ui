@@ -221,12 +221,23 @@ class ContactNav extends HTMLElement {Contact
     }
 
     if (hoverColor) {
+      const style = this.shadowRoot.querySelector('style');
+      style.innerHTML += `.nav-item:after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid ${hoverColor};
+        margin-top: 5px;
+        width: 0;
+        -webkit-transition: 0.5s ease-in;
+        transition: 0.5s ease-in;
+      }`
+
       navItems.forEach((navItem) => {
         navItem.addEventListener('mouseover', () => {
           navItem.style.color = hoverColor;
           navItem.style.fontWeight = 'bold';
-          navItem.style.borderColor = hoverColor;
         });
+        
         navItem.addEventListener('mouseleave', () => {
           navItem.style.color = '#fff';
           navItem.style.fontWeight = 'normal';
