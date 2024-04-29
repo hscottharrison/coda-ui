@@ -237,7 +237,7 @@ class ContactNav extends HTMLElement {Contact
           navItem.style.color = hoverColor;
           navItem.style.fontWeight = 'bold';
         });
-        
+
         navItem.addEventListener('mouseleave', () => {
           navItem.style.color = '#fff';
           navItem.style.fontWeight = 'normal';
