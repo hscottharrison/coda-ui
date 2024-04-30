@@ -23,4 +23,12 @@ function initNav() {
   contactNav.setAttribute('navLinks', JSON.stringify(navLinks));
 }
 
+function initModal() {
+  const modal = document.querySelector('coda-modal');
+  modal.setAttribute('scroll', window.scrollY);
+}
+
+document.querySelector('.modal-trigger').addEventListener('click', initModal);
+
+
 initNav();

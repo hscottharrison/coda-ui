@@ -1,8 +1,5 @@
 const heroTemplate = document.createElement('template');
 heroTemplate.innerHTML = `
-  <link rel="stylesheet" href="../styles/main.css" />
-  <link rel="stylesheet" href="../styles/hero.css"/>
-
   <style>
   * {
     box-sizing: border-box;
