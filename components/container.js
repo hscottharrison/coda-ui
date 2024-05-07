@@ -3,11 +3,9 @@ containerTemplate.innerHTML = `
   <link rel="stylesheet" href="../styles/main.css" />
   <style>
     .container {
-      width: 100%;
+      width: 70%;
       display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
+      justify-content: space-between;
       margin-bottom: 4em;
     }
   </style>
