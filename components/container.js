@@ -25,4 +25,4 @@ class Container extends HTMLElement {
   } 
 }
 
-window.customElements.define('coda-container', container);
+window.customElements.define('coda-container', Container);
