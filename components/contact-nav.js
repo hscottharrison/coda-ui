@@ -186,7 +186,7 @@ contactNavTemplate.innerHTML = `
 `
 
 class ContactNav extends HTMLElement {Contact
-  static observedAttributes = ['navLinks'];
+  static observedAttributes = ['navlinks'];
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -203,6 +203,12 @@ class ContactNav extends HTMLElement {Contact
     this.shadowRoot.querySelector('.nav-close-icon-wrapper').addEventListener('click', () => {
       this.toggleNavMenu();
     });
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {  
+    if (name === 'navlinks') {
+      this.initData();
+    }
   }
 
   initStyles() {
@@ -248,7 +254,7 @@ class ContactNav extends HTMLElement {Contact
 
   initData() {
     // ATTRIBUTES
-    const navLinks = JSON.parse(this.getAttribute('navLinks'));
+    const navLinks = JSON.parse(this.getAttribute('navlinks'));
     
     // ELEMENTS
     const navItemsLeft = this.shadowRoot.querySelector('.left');
