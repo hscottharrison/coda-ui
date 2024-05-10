@@ -12,7 +12,6 @@ inputTemplate.innerHTML = `
     .input {
       padding: 8px;
       border-radius: 4px;
-      height: 50px;
       width: 100%;
       border: 1px solid #ccc;
       font-size: 16px;
