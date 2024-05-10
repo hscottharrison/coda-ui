@@ -6,11 +6,11 @@ inputTemplate.innerHTML = `
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
     }
 
     .input {
-      padding: 0.5rem;
+      padding: 8px;
       border-radius: 4px;
       height: 50px;
       width: 100%;
@@ -19,7 +19,7 @@ inputTemplate.innerHTML = `
     }
 
     .input-label {
-      margin-bottom: 0.5rem;
+      margin-bottom: 8px;
       font-weight: bold;
     }
   </style>
@@ -67,6 +67,7 @@ class CodaInput extends HTMLElement {
   initDataAttributes() {
     if (this.hasAttribute('id')) {
       this.input.id = this.getAttribute('id');
+      this.input.name= this.getAttribute('id');
       this.label.htmlFor = this.getAttribute('id');
     }
 
@@ -76,6 +77,10 @@ class CodaInput extends HTMLElement {
 
     if (this.hasAttribute('label')) {
       this.label.textContent = this.getAttribute('label');
+    }
+
+    if (this.hasAttributes('type')) {
+      this.input.type = this.getAttribute('type');
     }
   }
 }
