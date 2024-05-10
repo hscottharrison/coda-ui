@@ -34,9 +34,14 @@
       </span>
     </intro-card>
 
-    <button class="modal-trigger">
-      <span>Click me</span>
-    </button> 
+    <coda-button
+      class="modal-trigger"
+      color="#639fb6"
+      hoverColor="#f59799"
+      textColor="#fff"
+      text="Open Modal this is a longer button"
+    >
+    </coda-button> 
     <coda-modal
       primaryColor="#639fb6"
     ></coda-modal>
@@ -55,12 +60,24 @@
       <img slot="image" src="./testCode/renovation-3.jpg" />
     </coda-carousel>
 
-    <script src="./testCode/index.js"></script>
-    <script src="./components/contact-nav.js"></script>
-    <script src="./components/hero.js"></script>
-    <script src="./components/intro-card.js"></script>
-    <script src="./components/modal.js"></script>
-    <script src="./components/info-card.js"></script>
-    <script src="./components/carousel.js"></script>
+    <div style="padding: 30px">
+      <coda-input
+        id="firstName"
+        label="First Name"
+        width="25"
+        focusColor="#639fb6"
+        value=""
+      ></coda-input>
+    </div>
+
+    <script src="./testCode/index.js" type="module"></script>
+    <script src="./components/contact-nav.js" type="module"></script>
+    <script src="./components/hero.js" type="module"></script>
+    <script src="./components/intro-card.js" type="module"></script>
+    <script src="./components/modal.js" type="module"></script>
+    <script src="./components/info-card.js" type="module"></script>
+    <script src="./components/carousel.js" type="module"></script>
+    <script src="./components/input.js" type="module"></script>
+    <script src="./components/button.js" type="module"></script>
 </body>
 </html>
